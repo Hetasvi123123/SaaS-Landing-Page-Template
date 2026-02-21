@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Modern SaaS landing page template built with HTML and Tailwind CSS. Perfect for startups, tools, and web apps.">
+    <meta name="keywords" content="saas landing page, html template, tailwind css landing page, startup website">
+    <meta name="author" content="Your Name">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Candal&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>SaaS Landing Page</title>
+</head>
+
+
+<body class="">
+
+    <!-- ================= HEADER ================= -->
+    <nav class="bg-[#07281A] px-6 py-4 shadow relative">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="text-[#ABB4A1] font-bold text-lg">
+                SaaSify
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-6 font-medium">
+                <li><a href="#features" class="text-[#ABB4A2] hover:text-[#54755A]">Features</a></li>
+                <li><a href="#work" class="text-[#ABB4A2] hover:text-[#54755A]">How it Works</a></li>
+                <li><a href="#pricing" class="text-[#ABB4A2] hover:text-[#54755A]">Pricing</a></li>
+                <li><a href="#testimonials" class="text-[#ABB4A2] hover:text-[#54755A]">Testimonials</a></li>
+                <li><a href="#faq" class="text-[#ABB4A2] hover:text-[#54755A]">FAQ</a></li>
+            </ul>
+
+            <!-- Desktop Button -->
+            <button
+                class="hidden md:block bg-[#54755A] text-[#07281A] font-bold px-5 py-2 rounded-lg hover:bg-[#07281A] hover:text-[#ABB4A2] transition">
+                Start Free Trial
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-[#ABB4A2] text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#07281A] mt-4 rounded-lg shadow-lg p-4 space-y-4 text-center">
+
+            <a href="#features" class="block text-[#ABB4A2] hover:text-[#54755A]">Features</a>
+            <a href="#work" class="block text-[#ABB4A2] hover:text-[#54755A]">How it Works</a>
+            <a href="#pricing" class="block text-[#ABB4A2] hover:text-[#54755A]">Pricing</a>
+            <a href="#testimonials" class="block text-[#ABB4A2] hover:text-[#54755A]">Testimonials</a>
+            <a href="#faq" class="block text-[#ABB4A2] hover:text-[#54755A]">FAQ</a>
+
+            <button
+                class="w-full bg-[#54755A] text-[#07281A] font-bold py-2 rounded-lg hover:bg-[#07281A] hover:text-[#ABB4A2] transition">
+                Start Free Trial
+            </button>
+        </div>
+    </nav>
+
+    <!-- Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- ================= HERO ================= -->
+    <section class="relative bg-[#02100B] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 py-28 text-center">
+
+            <!-- Heading -->
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#E6EEDD] leading-tight mb-6" data-aos="fade-up">
+                Manage Projects <br />
+                <span class="text-[#9FE870]">Smarter & Faster</span>
+            </h1>
+
+            <!-- Subtext -->
+            <p class="max-w-2xl mx-auto text-[#ABB4A2] text-lg mb-10" data-aos="fade-up" data-aos-delay="100">
+                Plan, track, and collaborate with your team using one powerful project
+                management platform.
+            </p>
+
+            <!-- CTA -->
+            <div class="flex justify-center gap-4 mb-20" data-aos="fade-up" data-aos-delay="200">
+                <a href="#pricing"
+                    class="bg-[#9FE870] text-[#02100B] px-8 py-4 rounded-xl font-semibold hover:scale-105 transition">
+                    Get Started Free
+                </a>
+
+                <a href="#features"
+                    class="border border-[#54755A] text-[#ABB4A2] px-8 py-4 rounded-xl hover:bg-[#07281A] transition">
+                    View Features
+                </a>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="relative flex justify-center" data-aos="zoom-in" data-aos-delay="300">
+                <img src="./image/hero.png" alt="Dashboard Preview"
+                    class="max-w-4xl w-full rounded-2xl shadow-2xl border border-[#07281A]" />
+
+                <!-- Glow effect -->
+                <div class="absolute -z-10 w-[80%] h-[80%] bg-[#9FE870]/20 blur-[120px] rounded-full"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features">
+        <div class="max-w-[1440px] mx-auto px-4 py-12 bg-[#ABB4A2]">
+
+            <div class="text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-[#07281A] font-['Robot']">
+                    OUR FEATURES
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center leading-9">
+
+                <div class="bg-[#07281A] text-[#ABB4A2] p-14 rounded-xl">
+                    <div class="mb-8 flex items-center justify-center">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#02100B] shadow bg-[#54755A] text-3xl">
+                            🗂️
+                        </div>
+                    </div>
+
+
+                    <span class="block text-lg font-bold mb-2  font-['Robot']">
+                        Smart Task Management
+                    </span>
+                    <p class="text-sm leading-relaxed tracking-widest">
+                        Organize tasks with clear priorities, due dates, and statuses. Stay focused and never miss what
+                        matters most.
+                    </p>
+                </div>
+
+                <div class="bg-[#07281A] text-[#ABB4A2] p-14 rounded-xl">
+                    <div class="mb-8 flex items-center justify-center">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#02100B] shadow bg-[#54755A] text-3xl">
+                            👥
+                        </div>
+                    </div>
+                    <span class="block text-lg font-bold mb-2  font-['Robot']">
+                        Team Collaboration
+                    </span>
+                    <p class="text-sm leading-relaxed tracking-widest">
+                        Work together in real time with comments, mentions, and shared updates—everyone stays on the
+                        same page.
+                    </p>
+                </div>
+
+                <div class="bg-[#07281A] text-[#ABB4A2] p-14 rounded-xl">
+                    <div class="mb-8 flex items-center justify-center">
+                        <div
+                            class="w-24 h-24 flex items-center justify-center rounded-full border-2 border-[#02100B] shadow bg-[#54755A] text-3xl">
+                            📊
+                        </div>
+                    </div>
+
+                    <span class="block text-lg font-bold mb-2  font-['Robot']">
+                        Progress Tracking
+                    </span>
+                    <p class="text-sm leading-relaxed tracking-widest">
+                        Visual dashboards and reports help you track progress, spot delays, and deliver projects on
+                        time.
+                    </p>
+                </div>
+
+                <div class="bg-[#07281A] text-[#ABB4A2] p-14 rounded-xl">
+                    <div class="mb-8 flex items-center justify-center">
+                        <div
+                            class="w-24 h-24  flex items-center justify-center rounded-full border-2 border-[#02100B] shadow bg-[#54755A] text-3xl">
+                            🔒
+                        </div>
+                    </div>
+
+                    <span class="block text-lg font-bold mb-2 font-['Robot']">
+                        Secure & Cloud-Based
+                    </span>
+                    <p class="text-sm leading-relaxed tracking-widest">
+                        Your data is protected with secure cloud storage, accessible anytime, anywhere, from any device.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section id="work" class="py-20 bg-gradient-to-b from-[#F4F7F5] to-[#EAF1EC]">
+        <div class="max-w-[1300px] mx-auto px-4">
+
+            <!-- Title -->
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#07281A] mt-3">
+                    How It Works
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-xl mx-auto">
+                    Get started and manage your projects in just a few simple steps.
+                </p>
+            </div>
+
+            <!-- Steps -->
+            <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Step 1 -->
+                <li
+                    class="group relative bg-white/80 backdrop-blur rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-[#07281A] to-[#4E7C5A] flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition">
+                            1
+                        </div>
+                    </div>
+                    <div class="mt-10 text-center">
+                        <h3 class="text-lg font-semibold text-[#07281A] mb-2">
+                            Sign Up
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Create your account and set up your workspace in just a few clicks.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Step 2 -->
+                <li
+                    class="group relative bg-white/80 backdrop-blur rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-[#07281A] to-[#4E7C5A] flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition">
+                            2
+                        </div>
+                    </div>
+                    <div class="mt-10 text-center">
+                        <h3 class="text-lg font-semibold text-[#07281A] mb-2">
+                            Add Tasks
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Break your project into tasks, assign owners, and set deadlines.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Step 3 -->
+                <li
+                    class="group relative bg-white/80 backdrop-blur rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-[#07281A] to-[#4E7C5A] flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition">
+                            3
+                        </div>
+                    </div>
+                    <div class="mt-10 text-center">
+                        <h3 class="text-lg font-semibold text-[#07281A] mb-2">
+                            Work Together
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Collaborate with your team using comments and live updates.
+                        </p>
+                    </div>
+                </li>
+
+                <!-- Step 4 -->
+                <li
+                    class="group relative bg-white/80 backdrop-blur rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="absolute -top-8 left-1/2 -translate-x-1/2">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gradient-to-br from-[#07281A] to-[#4E7C5A] flex items-center justify-center text-white text-xl font-bold shadow-lg group-hover:scale-110 transition">
+                            4
+                        </div>
+                    </div>
+                    <div class="mt-10 text-center">
+                        <h3 class="text-lg font-semibold text-[#07281A] mb-2">
+                            Review Progress
+                        </h3>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Track performance and complete projects with confidence.
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- ================= benefits ================= -->
+
+    <section id="benefits" class="bg-[#02100B] py-20">
+        <div class="max-w-[1440px] mx-auto px-4">
+
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <div class="text-xs uppercase tracking-widest text-[#9FE870] mb-3">
+                    BENEFITS
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#E6EEDD] tracking-tight">
+                    Why teams love using our platform
+                </h2>
+                <p class="mt-4 max-w-2xl mx-auto text-[#ABB4A2]">
+                    Everything you need to manage projects efficiently and grow faster.
+                </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        ⚡
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Get More Done Faster
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Streamline workflows and eliminate distractions so your team stays productive and focused.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        🤝
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Better Team Alignment
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Keep everyone aligned with shared goals, clear ownership, and real-time collaboration.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        📊
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Clear Project Visibility
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Track progress, spot risks early, and make smarter decisions with live insights.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        ⏰
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Save Time & Costs
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Automate routine tasks and reduce overhead while delivering projects faster.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        🔐
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Secure & Reliable
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Your data stays protected with enterprise-grade security and cloud backups.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="group bg-gradient-to-br from-[#07281A] to-[#02100B] p-8 rounded-2xl border border-[#0B3A26] hover:border-[#9FE870] transition">
+                    <div
+                        class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-[#54755A] text-2xl shadow group-hover:scale-110 transition">
+                        🚀
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#E6EEDD] mb-2 tracking-wide">
+                        Scale With Confidence
+                    </h3>
+                    <p class="text-sm text-[#ABB4A2] leading-relaxed">
+                        Built to grow with your business—whether you’re a startup or an enterprise.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= testimonials ================= -->
+
+    <section id="testimonials" class="py-20 bg-[#02100B]">
+        <div class="max-w-[1440px] mx-auto px-6">
+
+            <!-- Section Title -->
+            <div class="text-center mb-14">
+                <div class="text-xs font-semibold tracking-widest uppercase text-[#9FE870] mb-3">
+                    Testimonials
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#E6EDE3]">
+                    Loved by teams around the world
+                </h2>
+                <p class="mt-4 text-[#ABB4A2] max-w-2xl mx-auto">
+                    See how teams use our project management tool to stay organized and productive.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="bg-[#07281A] p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <p class="text-[#E6EDE3] text-sm leading-relaxed mb-6">
+                        “This tool completely changed how our team works. Everything is organized,
+                        transparent, and easy to manage.”
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#54755A] flex items-center justify-center text-lg">
+                            👨‍💼
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-[#E6EDE3]">Rahul Mehta</h4>
+                            <span class="text-xs text-[#ABB4A2]">Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#07281A] p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <p class="text-[#E6EDE3] text-sm leading-relaxed mb-6">
+                        “Simple, fast, and intuitive. Our team started using it immediately with
+                        zero learning curve.”
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#54755A] flex items-center justify-center text-lg">
+                            👩‍💼
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-[#E6EDE3]">Ananya Sharma</h4>
+                            <span class="text-xs text-[#ABB4A2]">Startup Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#07281A] p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+                    <p class="text-[#E6EDE3] text-sm leading-relaxed mb-6">
+                        “The progress tracking and dashboards help us deliver projects on time,
+                        every time.”
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#54755A] flex items-center justify-center text-lg">
+                            👨‍💻
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-[#E6EDE3]">Arjun Patel</h4>
+                            <span class="text-xs text-[#ABB4A2]">Operations Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRICING ================= -->
+
+    <section id="pricing" class="py-20 bg-[#F4F7F5]">
+        <div class="max-w-[1440px] mx-auto px-4">
+
+            <div class="text-center mb-12">
+                <div class="text-xs uppercase tracking-widest text-[#54755A] mb-2">
+                    Pricing
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold">
+                    Simple, transparent pricing
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Starter -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-2">Starter</h3>
+                    <p class="text-sm text-gray-500 mb-6">For individuals</p>
+                    <div class="text-4xl font-bold mb-6">₹0</div>
+                    <ul class="space-y-3 text-sm">
+                        <li>✔ Task management</li>
+                        <li>✔ Basic collaboration</li>
+                        <li>✔ Limited storage</li>
+                    </ul>
+                </div>
+
+                <!-- Pro -->
+                <div class="bg-[#07281A] text-[#ABB4A2] p-8 rounded-2xl shadow-xl scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Pro</h3>
+                    <p class="text-sm mb-6">Most popular</p>
+                    <div class="text-4xl font-bold mb-6">₹499</div>
+                    <ul class="space-y-3 text-sm">
+                        <li>✔ Everything in Starter</li>
+                        <li>✔ Analytics dashboard</li>
+                        <li>✔ Priority support</li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+                    <p class="text-sm text-gray-500 mb-6">For large teams</p>
+                    <div class="text-4xl font-bold mb-6">Custom</div>
+                    <ul class="space-y-3 text-sm">
+                        <li>✔ Unlimited users</li>
+                        <li>✔ Custom workflows</li>
+                        <li>✔ Dedicated support</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+
+            <div class="text-center mb-12">
+                <div class="text-xs uppercase tracking-widest text-[#54755A] mb-2">
+                    FAQ
+                </div>
+                <h2 class="text-3xl font-bold">
+                    Frequently asked questions
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Is there a free plan?</h4>
+                    <p class="text-sm text-gray-600">
+                        Yes, the Starter plan is completely free.
+                    </p>
+                </div>
+
+                <div class="border rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Can I cancel anytime?</h4>
+                    <p class="text-sm text-gray-600">
+                        Absolutely. You can upgrade or downgrade anytime.
+                    </p>
+                </div>
+
+                <div class="border rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Is my data secure?</h4>
+                    <p class="text-sm text-gray-600">
+                        We use modern cloud security practices to protect your data.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="py-24 bg-[#07281A] text-[#ABB4A2]">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Start managing projects smarter today
+            </h2>
+
+            <p class="mb-8 text-sm">
+                Join teams who stay organized and deliver faster.
+            </p>
+
+            <a href="#"
+                class="inline-block bg-[#9FE870] text-[#02100B] px-8 py-4 rounded-xl font-semibold hover:scale-105 transition">
+                Get Started Free
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-[#02100B] text-[#ABB4A2] py-12">
+        <div class="max-w-[1440px] mx-auto px-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+                <div>
+                    <h3 class="font-semibold text-lg mb-2">YourTool</h3>
+                    <p class="text-sm">
+                        Manage projects, collaborate better, and ship faster.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-2">Product</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-2">Company</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li>About</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-semibold mb-2">Legal</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-[#54755A] pt-6 text-center text-sm">
+                © 2026 YourTool. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
