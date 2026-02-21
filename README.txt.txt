@@ -15,4 +15,5 @@ How to Use:
 2. Edit content
 
 
-Support: hetusiddhapura12@gmail.com
+
+Support: hetasvisiddhapura12@gmail.com
